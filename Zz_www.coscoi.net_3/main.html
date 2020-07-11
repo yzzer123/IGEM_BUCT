@@ -1,0 +1,2151 @@
+
+
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+    	<title>COSCOI - COntents Signature COnvergence Improvement</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+        <meta name="description" content="캐릭터에 생명을 불어 넣는, 글로벌 콘텐츠 기업 COSCOI.">
+        <link rel="canonical" href="http://www.coscoi.net/">
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+        <meta http-equiv="Expires" content="0"> 
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="theme-color" content="#333333">
+        
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-106002559-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script type="text/javascript" src="static/js/wcslog.js"></script>
+<script type="text/javascript">
+if(!wcs_add) var wcs_add = {};
+wcs_add["wa"] = "65971337cf3ef";
+wcs_do();
+</script>
+        
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="static/css/common.css">
+        <link rel="stylesheet" href="static/css/coscoi.css">
+        
+        
+        <!-- JS -->
+        <script type="text/javascript" src="static/js/jquery.js"></script>
+		<script type="text/javascript" src="static/js/jquery-ui.js"></script>
+		<script type="text/javascript" src="static/js/jquery.bxslider.js"></script>
+		<script type="text/javascript" src="static/js/jquery.scrollbar.js"></script>
+		<script type="text/javascript" src="static/js/jquery.cookie.js"></script>
+		
+		<script type="text/javascript" src="static/js/imagesloaded.pkgd.min.js"></script>
+		<script type="text/javascript" src="static/js/common.js"></script>
+		<script type="text/javascript" src="static/js/snap.svg.js"></script>
+		<!-- <script type="text/javascript" src="static/js/cc.js"></script> -->
+		
+    </head>
+    <body>
+    	<div class="progress_wrap">
+    		<div class="loading">
+        		<img src="static/picture/loading.gif" alt="">
+    		</div>
+    		<div class="progress-txt">0%</div>
+		</div>
+    	<div class="l-container" id="progress">
+    	<div class="l-background"></div>
+    		
+
+
+
+
+
+
+
+<style>
+	#map {			
+     	height:240px !important;
+    }
+</style>
+<script>
+var hostname = window.location.origin;
+var lang_val_chk = 0;
+$(function () {
+	if('0001' == '0001'){
+		lang_val_chk = 1;
+		$("#lang_kr").css("display","block");
+	}else if('0001' == '0002'){
+		lang_val_chk = 4;
+		$("#lang_us").css("display","block");
+	}else if('0001' == '0003'){
+		lang_val_chk = 3;
+		$("#lang_jp").css("display","block");
+		$("body").css("font-family","Hiragino Kaku Gothic Pro, ヒラギノ角ゴ Pro W3, Osaka, Meiryo, メイリオ, MS PGothic, ＭＳ Ｐゴシック, sans-serif");
+	}else if('0001' == '0004'){
+		lang_val_chk = 2;
+		$("#lang_cn").css("display","block");
+		//$("body").css("font-family","'宋體', 'simsun', Arial");
+		$("body").css("font-family","Helvetica, Arial, Microsoft Yahei, 微软雅黑, STXihei, 华文细黑, sans-serif");
+		//$("body").css("font-family","Noto Sans SC, sans-serif");
+	}else{
+		lang_val_chk = 1;
+		$("#lang_kr").css("display","block");
+	}
+});
+
+/* SNS세팅[S] */
+function facebookShare(){
+	var currentAddress;
+	var language_code = 0001;
+	if(language_code == '0001'){
+		currentAddress = hostname+'/main?lang=ko';
+	}else if(language_code == '0002'){
+		currentAddress = hostname+'main?lang=us';
+	}else if(language_code == '0003'){
+		currentAddress = hostname+'/main?lang=jp';
+	}else if(language_code == '0004'){
+		currentAddress = hostname+'/main?lang=cn';
+	}else{
+		currentAddress = hostname+'/main?lang=ko';
+	}
+	// 주소 수정 필요
+	window.open('https://www.facebook.com/sharer/sharer.php?u='+currentAddress, 'window', 'width=600, height=300, left=0, top=0');
+	return false;
+}
+
+function twitterShare(){
+	var currentAddress;
+	var language_code = 0001;
+	if(language_code == '0001'){
+		currentAddress = hostname+'/main?lang=ko';
+	}else if(language_code == '0002'){
+		currentAddress = hostname+'/main?lang=us';
+	}else if(language_code == '0003'){
+		currentAddress = hostname+'/main?lang=jp';
+	}else if(language_code == '0004'){
+		currentAddress = hostname+'/main?lang=cn';
+	}else{
+		currentAddress = hostname+'/main?lang=ko';
+	}
+	var title = "COSCOI Renewal Page";
+	// 타이틀 메시지와 주소 수정 필요
+	window.open('https://twitter.com/intent/tweet?text='+title+'&url='+currentAddress, 'window', 'width=600, height=475, left=0, top=0');
+	return false;
+}
+
+function naverShare(){
+	var currentAddress;
+	var language_code = 0001;
+	if(language_code == '0001'){
+		currentAddress = hostname+'/main?lang=ko';
+	}else if(language_code == '0002'){
+		currentAddress = hostname+'/main?lang=us';
+	}else if(language_code == '0003'){
+		currentAddress = hostname+'/main?lang=jp';
+	}else if(language_code == '0004'){
+		currentAddress = hostname+'/main?lang=cn';
+	}else{
+		currentAddress = hostname+'/main?lang=ko';
+	}
+	var title = "COSCOI Renewal Page";
+	// 타이틀 메시지 주소 수정 필요
+	window.open('http://share.naver.com/web/shareView.nhn?url='+currentAddress+'&title='+title, 'window', 'width=600, height=550, left=0, top=0');
+	return false;
+}
+
+function baiduShare(){
+	var currentAddress;
+	var language_code = 0001;
+	if(language_code == '0001'){
+		currentAddress = hostname+'/main?lang=ko';
+	}else if(language_code == '0002'){
+		currentAddress = hostname+'/main?lang=us';
+	}else if(language_code == '0003'){
+		currentAddress = hostname+'/main?lang=jp';
+	}else if(language_code == '0004'){
+		currentAddress = hostname+'/main?lang=cn';
+	}else{
+		currentAddress = hostname+'/main?lang=ko';
+	}
+	// 주소 수정 필요
+	window.open('http://tieba.baidu.com/i/app/open_share_api?link='+currentAddress, 'window', 'width=650, height=450, left=0, top=0');
+	return false;
+}
+/* SNS세팅[E] */
+</script>
+
+  <!-- start :: l-header -->
+<div class="l-header">
+    <div class="c-button--s1 c-button--s1-close">
+        <div class="c-button--s1__circle">
+
+            <div class="c-button--s1__circle-top">
+                <svg id="animated" viewbox="0 0 100 100" style="width:57px; height:57px;">
+                    <path id="progress1" stroke-linecap="round" stroke-width="5" stroke="#ff3f34" fill="none" d="M50 10
+                           a 40 40 0 0 1 0 80
+                           a 40 40 0 0 1 0 -80">
+                    </path>
+                </svg>
+            </div>
+
+        </div>
+        <div class="c-button--s1__icon">
+            <div class="c-button--s1__icon-bar">
+                <div></div>
+            </div>
+            <div class="c-button--s1__icon-bar">
+                <div></div>
+            </div>
+            <div class="c-button--s1__icon-bar">
+                <div></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="l-header__logo">
+    	
+    		
+    			<a href="">
+    		
+    		
+    		
+    		
+    		
+    	
+        <img src="static/picture/main_logo.png" class="l-header__logo-a" alt="">
+        <img src="static/picture/main_logo2.png" class="l-header__logo-b" alt="">
+        </a>
+    </div>
+    
+    <div class="l-lnb">
+        <div class="l-lnb__menu">
+            <ul>
+               <li class="l-lnb__menu-item evt-hover">
+               
+    				
+    					<a href="javascript:goPage('1', '/main','0');" id="0" class="on"><div></div><em></em><span>HOME</span>
+    				
+    				
+    				
+    				
+    				
+    			
+               	</a></li>
+                
+			
+				
+				
+			    
+				
+			
+				
+					
+					<li class='l-lnb__menu-item evt-hover'>
+					
+						
+							<a href="javascript:goPage('1', '/about/index?lang=kr','47');" id="47"><div></div><em></em><span>ABOUT</span></a>
+						
+						
+								
+					
+					
+				
+			
+						
+		
+			
+				</li>
+				
+			    
+				
+			
+				
+					
+					<li class='l-lnb__menu-item '>
+					
+						
+						
+							
+								
+								
+									
+    									
+    										<a href="javascript:goPage('2', '63','63');" class="contents-pop__open" data-menu-seq="63"><div></div><em></em><span>CONTENTS</span></a>
+    									
+    									
+    									
+    									
+    									
+    								
+								
+								
+							
+						
+								
+					
+					
+				
+			
+						
+		
+			
+				
+				
+			    
+				<ul>
+			
+				
+					
+					
+					<li>
+					
+						
+						
+						<a href="javascript:goPage('2', '63','63');" class="contents-pop__open" data-menu-seq="63" id="p-63"><div></div><em></em><span>동유기</span></a>
+						
+					
+						
+					
+				
+			
+						
+		
+			
+				</li>
+				
+			    
+				
+			
+				
+					
+					
+					<li>
+					
+						
+						
+						<a href="javascript:goPage('2', '64','64');" class="contents-pop__open" data-menu-seq="64" id="p-64"><div></div><em></em><span>슬루</span></a>
+						
+					
+						
+					
+				
+			
+						
+		
+			
+				</li>
+				
+			    
+				
+			
+				
+					
+					
+					<li>
+					
+						
+						
+						<a href="javascript:goPage('2', '69','69');" class="contents-pop__open" data-menu-seq="69" id="p-69"><div></div><em></em><span>노바</span></a>
+						
+					
+						
+					
+				
+			
+						
+		
+			
+				
+				
+			        
+			            </li></ul>
+			        
+			        </li>
+			    
+			    
+				
+			
+				
+					
+					<li class='l-lnb__menu-item evt-hover'>
+					
+						
+							<a href="javascript:goPage('1', '/works/index','49');" id="49"><div></div><em></em><span>WORKS</span></a>
+						
+						
+								
+					
+					
+				
+			
+						
+		
+			
+				</li>
+				
+			    
+				
+			
+				
+					
+					<li class='l-lnb__menu-item '>
+					
+						
+						
+							
+								
+									<a href="javascript:goPage('1', '/notice/notice_index','100');"><div></div><em></em><span>PR</span></a>
+								
+								
+								
+							
+						
+								
+					
+					
+				
+			
+						
+		
+			
+				
+				
+			    
+				<ul>
+			
+				
+					
+					
+					<li>
+					
+						
+						<a href="javascript:goPage('1', '/notice/notice_index','100');" id="100"><div></div><em></em><span>NOTICE</span></a>
+						
+						
+					
+						
+					
+				
+			
+						
+		
+			
+				</li>
+				
+			    
+				
+			
+				
+					
+					
+					<li>
+					
+						
+						<a href="javascript:goPage('1', '/mediaCenter/index','101');" id="101"><div></div><em></em><span>MEDIA CENTER</span></a>
+						
+						
+					
+						
+					
+				
+			
+						
+		
+			
+				
+				
+			        
+			            </li></ul>
+			        
+			        </li>
+			    
+			    
+				
+			
+				
+					
+					<li class='l-lnb__menu-item evt-hover'>
+					
+						
+							<a href="javascript:goPage('1', '/hr/index','51');" id="51"><div></div><em></em><span>HR</span></a>
+						
+						
+								
+					
+					
+				
+			
+						
+		
+            </li></ul>
+        </div>
+        <div class="l-lnb__f-link">
+            <a class="l-contact__open">CONTACT</a>
+            <a class="l-privacy__open_lnb">PRIVACY POLICY</a>
+            <a class="l-lang__open">LANG</a>
+        </div>
+
+    </div>
+</div>
+<!-- end :: l-header -->
+
+<!-- start :: l-lang -->
+<div class="l-lang">
+    <div class="c-button--s4" data-val="1">
+        <img src="static/picture/icon_korea.png" alt="">
+        <div id="lang_kr">
+            <p onclick="javascript:location.href='/main?lang=ko'">KOR</p>
+            <svg width="100%" height="100%"></svg>
+        </div>
+    </div>
+    <div class="c-button--s4" data-val="2">
+        <img src="static/picture/icon_chinese.png" alt="">
+        <div id="lang_cn">
+            <p onclick="javascript:location.href='/main?lang=cn'">CHN</p>
+            <svg width="100%" height="100%"></svg>
+        </div>
+    </div>
+    <div class="c-button--s4" data-val="3">
+        <img src="static/picture/icon_japan.png" alt="">
+        <div id="lang_jp">
+            <p onclick="javascript:location.href='/main?lang=jp'">JPN</p>
+            <svg width="100%" height="100%"></svg>
+        </div>
+    </div>
+    <div class="c-button--s4" data-val="4">
+        <img src="static/picture/icon_usa.png" alt="">
+        <div id="lang_us">
+            <p onclick="javascript:location.href='/main?lang=us'">USA</p>
+            <svg width="100%" height="100%"></svg>
+        </div>
+    </div>
+    <div><img src="static/picture/logo01.png" alt=""></div>
+</div>
+<!-- end :: l-lang -->
+
+
+    <!-- start :: l-rnb -->
+<div class="l-rnb">
+    <div class="l-rnb__menu">
+        <div class="l-rnb__menu-tit">
+            Follow
+            <div></div>
+        </div>
+        <ul>
+            <li class="l-rnb__menu-item"> <a href="javascript:;" target="_blank"><div></div><em></em><span>YOUTUBE</span> </a> </li>
+            <li class="l-rnb__menu-item"> <a href="javascript:;" target="_blank"><div></div><em></em><span>KAKAO TV</span> </a> </li>
+        </ul>
+        <div class="l-rnb__menu-tit">
+            Share
+            <div></div>
+        </div>
+        <ul>
+            <li class="l-rnb__menu-item"> <a href="#n" onclick="facebookShare()"><div></div><em></em><span>FACEBOOK</span></a></li>
+            <li class="l-rnb__menu-item"> <a href="#n" onclick="twitterShare()"><div></div><em></em><span>TWITTER</span></a></li>
+            <li class="l-rnb__menu-item"> <a href="#n" onclick="naverShare()"><div></div><em></em><span>NAVER BLOG</span></a></li>
+            <li class="l-rnb__menu-item"> <a href="#n" onclick="baiduShare()"><div></div><em></em><span>BAIDU</span></a></li>
+        </ul>
+        <div class="l-rnb__menu-tit">
+            Download
+            <div></div>
+        </div>
+        <ul>
+            <li class="l-rnb__menu-item"> <a href="javascript:;"><div></div><em></em><span>COMPANY PROFILE</span></a></li>
+        </ul>
+        <div class="l-rnb__menu-tit">
+            Family Site
+            <div></div>
+        </div>
+        <ul>
+        
+        	
+            	<li class="l-rnb__menu-item"> <a href="index.html" target="_blank"><div></div><em></em><span>동유기</span></a></li>
+            
+            
+            
+            
+            
+            
+            
+        		
+            		<li class="l-rnb__menu-item"> <a href="javascript:;" target="_blank"><div></div><em></em><span>3TING</span></a></li>
+            	
+            	
+            	
+            
+            
+        </ul>
+    </div>
+
+</div>
+<!-- end :: l-rnb -->
+        	
+
+
+
+
+
+
+
+<script type="text/javascript" src="static/js/jquery.fitvids.js"></script>
+<script type="text/javascript">
+var fullBannerSlider = null;
+var subBannerSlider = null;
+var fullBannerList = new Array();
+var playerList = new Array();
+var mainSlideClick = 1;
+var vidCount = 0;
+
+
+var data = {"fileSeq":"1836"
+		,"title":"Baskin Robbins x COSCOI"
+		,"subTitle":"Extremely Rabbit mic"
+		,"content":"흥이란게 폭발한다! 오버액션 블루투스 마이크"
+		,"httpUrl":""
+		,"url":"http://"
+		,"urlType":"N"
+		,"fileType":"I"
+		};
+fullBannerList.push(data);
+
+var data = {"fileSeq":"876"
+		,"title":"동유기"
+		,"subTitle":"HD Full 3D CGI Animation"
+		,"content":"형을 찾아 동쪽으로 길을 떠난 바나몽과 친구들의 먹방여행기"
+		,"httpUrl":""
+		,"url":"http://"
+		,"urlType":"N"
+		,"fileType":"V"
+		};
+fullBannerList.push(data);
+
+var data = {"fileSeq":"821"
+		,"title":"나의 일상 속 두근두근,"
+		,"subTitle":"향기 나는 디즈니_미니램프"
+		,"content":"어디서도 볼 수 없던 퀄리티와 디자인을 선보입니다."
+		,"httpUrl":"https://www.womanstalk.co.kr/product/view/2017110300002"
+		,"url":"https://www.womanstalk.co.kr/product/view/2017110300002"
+		,"urlType":"Y"
+		,"fileType":"V"
+		};
+fullBannerList.push(data);
+
+var data = {"fileSeq":"822"
+		,"title":"이젠 좀 더 Fun 하게 씻자!"
+		,"subTitle":"디즈니_토이 Soap &#38; Bath"
+		,"content":"씻는 즐거움과 함께 16종의 피규어 콜렉션을 완성해보세요."
+		,"httpUrl":"https://www.womanstalk.co.kr/product/view/2017110600025"
+		,"url":"https://www.womanstalk.co.kr/product/view/2017110600025"
+		,"urlType":"Y"
+		,"fileType":"V"
+		};
+fullBannerList.push(data);
+
+
+/* 브라우저 창 활성화되었을때 */
+/* window.addEventListener('mouseover', function() {
+    if(playerList[video_id] != null){
+		   playerList[video_id].play();
+	   }
+}, false); */
+/* window.addEventListener('focus', function() {
+    if(playerList[video_id] != null){
+		   playerList[video_id].play();
+	   }
+}, false); */
+/* 브라우저 창 비활성화되었을때 */
+/* window.addEventListener('blur', function() {
+    if(playerList[video_id] != null){
+		   playerList[video_id].pause();
+		   playerList[video_id].currentTime = 0;
+	   }
+}, false); */
+
+/* if(fullBannerList[0].fileType == 'V'){
+	if(window.addEventListener){
+		window.addEventListener('load', function(){
+			if(window.HTMLVideoElement){
+				//player = document.getElementById('fvideo-0');
+				player.addEventListener("ended", function()    {
+
+    				//이 부분이 실행된다
+    				//console.log("재생 종료: ");
+    				//fullBannerSlider.goToNextSlide();
+    				
+    				});
+				
+			}
+		}, false);
+
+	}	
+} */
+
+    $( function () {
+    	
+    	/* 서브배너슬라이드생성 */
+    	subBannerSlider = $('.bxslider-s1').bxSlider({
+            auto: true,
+            autoControls: false,
+            autoControlsCombine: true,
+            easing: 'easeOutExpo',
+            speed: 1000,
+            mode: 'fade',
+            onSliderLoad: function(currentIndex){
+            	//setTimeout("subBannerSlider.goToNextSlide()",1000*5);
+            },
+            onSlideBefore: function($slideElement, oldIndex, newIndex){
+            	subBannerSlider.stopAuto();
+            	mainSlideControlsSub(1);
+            	//setTimeout("subBannerSlider.goToNextSlide()",1000*5);
+            },
+            onSlideAfter: function($slideElement, oldIndex, newIndex){
+            	mainSlideControlsSub(2);
+            	subBannerSlider.startAuto();
+            }
+        });
+    	
+    	/* for(var i=0; i < fullBannerList.length;i++){
+    		getVideoStream(i,fullBannerList[i].fileSeq);
+    	} */
+    	sliderOnload();
+    	getVideoStream(0,fullBannerList[0].fileSeq);
+    });
+    
+    function mainSlideControls(n){
+    	
+    	if(n == 1){
+    		mainSlideClick = 2;
+    		$('.bxslider-s2__wrap .bx-controls .bx-prev').addClass('disabled');
+    		$('.bxslider-s2__wrap .bx-controls .bx-next').addClass('disabled');
+    		
+    	} else if (n == 2) {
+    		mainSlideClick = 1;
+    		$('.bxslider-s2__wrap .bx-controls .bx-prev').removeClass('disabled');
+    		$('.bxslider-s2__wrap .bx-controls .bx-next').removeClass('disabled');
+    		
+    		
+    	}
+    	
+    }
+    
+    function mainSlideControlsSub(n){
+    	if(n == 1){
+    		mainSlideClick = 2;
+    		$('.bxslider-s1__wrap .bx-controls .bx-prev').addClass('disabled');
+    		$('.bxslider-s1__wrap .bx-controls .bx-next').addClass('disabled');
+    	} else if (n == 2) {
+    		mainSlideClick = 1;
+    		$('.bxslider-s1__wrap .bx-controls .bx-prev').removeClass('disabled');
+    		$('.bxslider-s1__wrap .bx-controls .bx-next').removeClass('disabled');
+    	}
+    }
+    
+    function getVideoStream(id, fileSeq) {
+    	var req = new XMLHttpRequest();
+    	req.open('GET', '/file/download/'+fileSeq, true);
+    	req.responseType = 'blob';
+    	req.onload = function() {
+           if (this.status === 200) {
+              var videoBlob = this.response;
+              var vid = URL.createObjectURL(videoBlob); // IE10+
+              vidCount += 1;
+              if(fullBannerList[id].fileType == 'V' ){
+            	  if(vidCount == 1 && id == 0){
+                	  //console.log("슬라이더 복수일때 시작: "+id);
+                	  $(".fullbanner-"+id).attr("src",vid);
+                	  //console.log("슬라이더 시작: ");
+                	  //sliderOnload();
+                  }else{
+                	  //console.log("슬라이더 복수일때 시작2: "+id);
+                	  //console.log("슬라이더 복수일때 시작3vid: "+vid);
+                	  $(".fullbanner-"+id).attr("src",vid);
+                  }
+            	  /* if(vidCount == 3){
+            		  console.log("슬라이더 시작: ");
+            		  sliderOnload();
+            	  } */
+              }else{
+            	  /* if(vidCount == 1){
+                	  console.log("슬라이더 복수일때 시작 vidCount: "+vidCount);
+                	  $(".fullbannerImg-"+id).css({'background-image':'url('+vid+')'});
+                	  //sliderOnload();
+                  }else{
+                	  $(".fullbannerImg-"+id).css({'background-image':'url('+vid+')'});
+                  } */
+            	  $(".fullbannerImg-"+id).css({'background-image':'url('+vid+')'});
+              }
+              
+              /* if(vidCount == 3){
+            	//$(".bxslider-s2__wrap .bx-wrapper .bx-controls").css("display","flex");
+              } */
+              
+              //console.log("length: "+fullBannerList.length+ "// vidCount: "+vidCount);
+              
+           }
+        };
+        req.onprogress = function(e) {
+        	//console.log("%: "+Math.floor((e.loaded/e.total)*100));
+        	//updateProgress2(e.loaded,e.total);
+        	//$("#progress2").val(Math.floor((e.loaded/e.total)*100));
+        	//$("#progress2").html(Math.floor((e.loaded/e.total)*100) + '%');
+        };
+        req.onerror = function() {
+           // Error
+        };
+        req.send();
+	}
+        
+        //서브배너 클릭시 페이지 이동
+        function goSubBannerPage(target,url) {
+        	if(target == 'Y'){
+        		var openNewWindow = window.open("about:blank");
+        		openNewWindow.location.href = url;
+        	}else{
+        		self.location.href=url;
+        	}
+		}
+        //슬라이더 생성
+        function sliderOnload() {
+        	
+        	if('4' > 0){
+        		fullBannerSlider = $('.bxslider-s2').bxSlider({
+                	auto: false,
+                	video: true,
+                	mode: 'fade',
+                	autoControls: false,
+                	minSlides: 1,
+                	maxSlides: 1,
+                	autoControlsCombine: true,
+                	easing: 'easeOutExpo',
+                	speed: 1000,
+                	onSliderLoad: function(currentIndex){
+                		
+                		for(var i=1; i < fullBannerList.length;i++){
+                			getVideoStream(i,fullBannerList[i].fileSeq);
+                		}
+                		
+                		if(fullBannerList[currentIndex].fileType == 'V'){
+                			var player = $('.bxslider-s2>li:not(.bx-clone)').eq(currentIndex).find(".fullbanner-"+currentIndex)[0];
+                			player.muted = true;
+                			if(fullBannerList.length == 1){
+                				$(".bx-controls").css("display","none");
+                				player.loop = true;
+                				player.muted = true;
+                				player.play();
+                			}else{
+                				if(playerList[currentIndex] == null){
+                    				playerList.push(player);
+                    				playerList[currentIndex].addEventListener("ended", function(event)    {
+                        				fullBannerSlider.goToNextSlide();
+                        			}, false);
+                    			}
+                    			video_id = currentIndex;
+                    			playerList[currentIndex].play();
+                			}
+                			
+                		}else{
+                			console.log("1");
+                			if(fullBannerList.length != 1){
+                				console.log("2");
+                				if(playerList[currentIndex] == null){
+                					console.log("3");
+                    				playerList.push(null);	
+                    			}
+                    			setTimeout("fullBannerSlider.goToNextSlide()",1000*7);
+                			}else{
+                				console.log("4");
+                				//풀배너 이미지 한개일때
+                				$(".bx-controls").css("display","none");
+                			}
+                		}
+                		$(".main-notice__tit").html(fullBannerList[currentIndex].title);
+                		$(".main-notice__subtit").html(fullBannerList[currentIndex].subTitle);
+                		$(".main-notice__txt").html(fullBannerList[currentIndex].content);
+                		if(fullBannerList[currentIndex].httpUrl != ''){
+                			if(fullBannerList[currentIndex].urlType == 'Y'){
+                    			$(".main-notice__btn").html('<a class="c-button--s2" target="_blank" href="'+fullBannerList[currentIndex].url + '"><span><em  class="arrow-left--s1"></em></span>more</a>');	
+                    		}else{
+                    			$(".main-notice__btn").html('<a class="c-button--s2" target="_blank" href="'+fullBannerList[currentIndex].url + '"><span><em  class="arrow-left--s1"></em></span>more</a>');
+                    		}	
+                		}
+                	},
+        			onSlideBefore: function($slideElement, oldIndex, newIndex){
+        				//console.log("onSliderLoad2: "+ oldIndex+" : "+fullBannerList[oldIndex].fileType);
+        				//console.log("onSliderLoad3: "+ newIndex+" : "+fullBannerList[newIndex].fileType);
+        				//$(".bxslider-s2__wrap .bx-wrapper .bx-controls").css("display","none");
+        				$(".bxslider-s2__wrap .bx-wrapper .bx-controls").css("pointer-events","none");
+        				mainSlideControls(1);
+        				if(playerList[oldIndex] != null){
+        					playerList[oldIndex].pause();
+        					playerList[oldIndex].currentTime = 0;
+        				}
+        				if(fullBannerList[fullBannerSlider.getCurrentSlide()].fileType == 'V'){
+        					//비디오
+                			if(playerList[fullBannerSlider.getCurrentSlide()] == null){
+                				if($(".fullbanner-"+fullBannerSlider.getCurrentSlide()).attr("src") != undefined){
+                					var player = $('.bxslider-s2>li:not(.bx-clone)').eq(fullBannerSlider.getCurrentSlide()).find(".fullbanner-"+fullBannerSlider.getCurrentSlide())[0];
+                    				player.muted = true;
+                    				playerList[fullBannerSlider.getCurrentSlide()] = player;
+                    				if(playerList[oldIndex] == null){
+                    					//console.log("oldIndex");
+                    					//console.log(oldIndex);
+                    					/* if($(".fullbanner-"+oldIndex.attr("src") != undefined)){
+                    						var player = $('.bxslider-s2>li:not(.bx-clone)').eq(oldIndex).find(".fullbanner-"+oldIndex)[0];
+                    						playerList[oldIndex] = player;
+                    					} */
+                    					var player = $('.bxslider-s2>li:not(.bx-clone)').eq(oldIndex).find(".fullbanner-"+oldIndex)[0];
+                						playerList[oldIndex] = player;
+                    					
+                    				}
+                    				playerList[fullBannerSlider.getCurrentSlide()].addEventListener("ended", function(event)    {
+                        				//이 부분이 실행된다
+                        				fullBannerSlider.goToNextSlide();
+                        			}, false);
+                    				playerList[fullBannerSlider.getCurrentSlide()].play();
+                        			video_id = fullBannerSlider.getCurrentSlide();
+                				}else{
+                					setTimeout("fullBannerSlider.goToNextSlide()",1000*3);
+                				}
+                				
+                			}else{
+                				playerList[fullBannerSlider.getCurrentSlide()].currentTime = 0;
+                				playerList[fullBannerSlider.getCurrentSlide()].play();
+                				/* if(event.detail===1) {
+                					//el.goToNextSlide();
+                					console.log("PPPP");
+                				} */
+                    			video_id = fullBannerSlider.getCurrentSlide();
+                			}
+                			
+                		}else{
+                			//이미지
+                			if(playerList[fullBannerSlider.getCurrentSlide()] == null){
+                				playerList.push(null);	
+                			}
+                			setTimeout("fullBannerSlider.goToNextSlide()",1000*3);
+                		}
+        				$(".main-notice__tit").html(fullBannerList[fullBannerSlider.getCurrentSlide()].title);
+        				$(".main-notice__subtit").html(fullBannerList[fullBannerSlider.getCurrentSlide()].subTitle);
+        				$(".main-notice__txt").html(fullBannerList[fullBannerSlider.getCurrentSlide()].content);
+        				if(fullBannerList[fullBannerSlider.getCurrentSlide()].httpUrl != ''){
+                			if(fullBannerList[fullBannerSlider.getCurrentSlide()].urlType == 'Y'){
+                    			$(".main-notice__btn").html('<a class="c-button--s2" target="_blank" href="'+fullBannerList[fullBannerSlider.getCurrentSlide()].url + '"><span><em  class="arrow-left--s1"></em></span>more</a>');	
+                    		}else{
+                    			$(".main-notice__btn").html('<a class="c-button--s2" target="_blank" href="'+fullBannerList[fullBannerSlider.getCurrentSlide()].url + '"><span><em  class="arrow-left--s1"></em></span>more</a>');
+                    		}	
+                		}else{
+                			$(".main-notice__btn").html("");
+                		}
+                	},
+                	onSlideAfter: function($slideElement, oldIndex, newIndex){
+                		mainSlideControls(2);
+                		//$(".bxslider-s2__wrap .bx-wrapper .bx-controls").css("display","flex");
+                		$(".bxslider-s2__wrap .bx-wrapper .bx-controls").css("pointer-events","auto");
+                	}
+            	});
+        			$(".bxslider-s2__wrap .bx-wrapper .bx-controls").css("display","none");
+            	}
+        }
+</script>
+<!-- start :: main-contents  -->
+    <div class="main-contents">
+        <!-- start :: main-home -->
+        <div id="main-home">
+
+            <div class="main-contents__view">
+            	
+                <div class="c-edge"></div>
+	            <div class="main-home__video-slide">  
+	            	<div class="bxslider-s2__wrap">
+		                <ul class="bxslider bxslider-s2">
+		                	
+		                		
+		                			
+		                			
+			                			<li class="fullbannerImg-0"></li>		
+		                			
+		                		
+		                	
+		                		
+		                			
+		                				<li style="margin:-2px">
+											<div class="main-contents__video" oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+				                    			<video class="fullbanner_img-w fullbanner-1"></video>
+				                			</div>
+		                    			</li>
+		                			
+		                			
+		                		
+		                	
+		                		
+		                			
+		                				<li style="margin:-2px">
+											<div class="main-contents__video" oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+				                    			<video class="fullbanner_img-w fullbanner-2"></video>
+				                			</div>
+		                    			</li>
+		                			
+		                			
+		                		
+		                	
+		                		
+		                			
+		                				<li style="margin:-2px">
+											<div class="main-contents__video" oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+				                    			<video class="fullbanner_img-w fullbanner-3"></video>
+				                			</div>
+		                    			</li>
+		                			
+		                			
+		                		
+		                	
+		                </ul>    
+	                </div>
+				</div>
+				
+						<script type="text/javascript">
+		                		//getVideoStream(0,1836);
+		                </script>
+		        
+						<script type="text/javascript">
+		                		//getVideoStream(1,876);
+		                </script>
+		        
+						<script type="text/javascript">
+		                		//getVideoStream(2,821);
+		                </script>
+		        
+						<script type="text/javascript">
+		                		//getVideoStream(3,822);
+		                </script>
+		        
+                <div class="main-notice">
+                    <div class="main-notice__cont">
+                        <div class="main-notice__tit"></div>
+                        <div class="main-notice__subtit"></div>
+                        <div class="main-notice__txt"></div>
+                        <div class="main-notice__bar"><span></span></div>
+                    </div>
+                    <div class="main-notice__btn"></div>
+                </div>
+
+				
+                <div class="main-bnr1">
+                	
+                    
+                    
+                		
+                			<a target="_blank" href="javascript:;">	
+                		
+                		
+                	
+                    	<img src="static/picture/2021.jpg" alt="">
+                    </a>
+                    <div>
+                    
+                		
+                			<a class="c-button--s3" target="_blank" href="javascript:;">
+                		
+                		
+                	
+                        	<span><em class="arrow-right--s2"></em></span>more
+                        </a>
+                    </div>
+                    
+                </div>
+                
+ 
+				
+                <div class="main-bnr2">
+                    <!-- start :: bxslider -->
+                    <div class="bxslider-s1__wrap">
+                        <ul class="bxslider bxslider-s1">
+                        
+                        	
+                					
+                        				
+                							
+                								<li style="cursor:pointer" onclick="goSubBannerPage('Y','http://goeast.coscoi.net')">
+                							
+                							
+                						
+									
+									
+							
+								<img src="static/picture/1899.jpg" alt="">
+							</li>
+						
+                        	
+                					
+                        				
+                							
+                								<li style="cursor:pointer" onclick="goSubBannerPage('Y','http://3ting.co.kr')">
+                							
+                							
+                						
+									
+									
+							
+								<img src="static/picture/835.jpg" alt="">
+							</li>
+						
+                        </ul>
+                    </div>
+                    <!-- end :: bxslider -->
+                </div>
+				
+				
+				
+				<div class="main-scroll-arrow" onclick="javascript:$('#contents').trigger('click');">
+	                <div></div>
+	                <img src="static/picture/scroll_arrow.png" alt="">
+	            </div>
+            </div>
+
+
+            
+
+        </div>
+        <!-- end :: main-home -->
+
+        <!-- start :: id=main-contents -->
+        <div id="main-contents">
+
+            <div class="main-cont__title">
+                CONTENTS
+                <span></span>
+            </div>
+
+            <!-- start :: main-cont__vis1 -->
+            <div class="main-cont__vis1 main-cont__vis-n1">
+                <figure class="cd-floating-background">
+                    <div></div>
+                    <img src="static/picture/main-cont-s1_i2.png" class="mcv-s1-i2" alt="">
+                    <img src="static/picture/main-cont-s1_i4.png" class="mcv-s1-i4" alt="">
+                    <img src="static/picture/main-cont-s1_i5.png" class="mcv-s1-i5" alt="">
+        		</figure>
+            </div>
+            <!-- end :: main-cont__vis1 -->
+
+            <!-- start :: main-cont__vis2 -->
+            <div class="main-cont__vis2 main-cont__vis-n3">
+                <figure class="cd-floating-background">
+                    <div></div>
+        		</figure>
+            </div>
+            <!-- end :: main-cont__vis2 -->
+
+            <!-- start :: main-cont__vis3 -->
+            <div class="main-cont__vis3 main-cont__vis-n2">
+                <figure class="cd-floating-background">
+                    <div></div>
+                    <img src="static/picture/main-cont-s3_i2.png" class="mcv-s3-i2" alt="">
+                    <img src="static/picture/main-cont-s3_i1.png" class="mcv-s3-i1" alt="">
+        		</figure>
+            </div>
+            <!-- end :: main-cont__vis3 -->
+
+            <!-- start :: main-cont__slide-btn -->
+            <div class="main-cont__slide-btn main-cont__slide-btn--prev">
+                <div class="mc-num">
+
+                </div>
+                <div class="mc-line">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="mc-name">
+
+                </div>
+            </div>
+            <div class="main-cont__slide-btn main-cont__slide-btn--next">
+                <div class="mc-num">
+
+                </div>
+                <div class="mc-line">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="mc-name">
+
+                </div>
+            </div>
+            <div class="main-cont__slide-btn--active contents-pop__open" data-lang="0001">
+                <div class="mc-num">
+                    01
+                </div>
+                <div class="mc-name">
+                    GOEAST
+                </div>
+            </div>
+            <!-- end ::  main-cont__slide-btn -->
+
+            <!-- start :: main-cont__slide -->
+            <div class="main-cont__slide">
+                <div class="main-cont__slide-in">
+                    <ul>
+                        <li data-val="1">
+
+                            <div class="main-cont__slide-box">
+                                <div class="mcs-title mcs-title--s1">
+
+                                        GO<br>
+                                        EAST
+                                    <img src="static/picture/main-cont-s1_logo.png">
+                                </div>
+
+                                <div class="mcv-s1-i3">
+                                    <img src="static/picture/main-cont-s1_i3.png" alt="">
+                                </div>
+
+                                <div class="mcv-s1-i1">
+                                    <img src="static/picture/main-cont-s1_i1.png" alt="">
+                                </div>
+
+
+                                <img src="static/picture/main-cont-box1.png" alt="" style="width:100%;">
+
+                            </div>
+
+                        </li>
+                        <li data-val="2">
+
+                            <div class="main-cont__slide-box">
+                                <div class="mcs-title mcs-title--s3">
+                                    SLOO
+                                    <img src="static/picture/main-cont-s3_logo.png">
+                                </div>
+                                <img src="static/picture/main-cont-box1.png" alt="" style="width:100%;">
+                            </div>
+
+
+                        </li>
+                        <li data-val="3">
+
+                            <div class="main-cont__slide-box">
+                                <div class="mcs-title">
+                                    NOBAH
+                                    <img src="static/picture/main-cont-s2_logo.png" style="width:10%;">
+                                </div>
+                                <img src="static/picture/main-cont-box1.png" alt="" style="width:100%;">
+                            </div>
+
+                        </li>                        
+                    </ul>
+                </div>
+            </div>
+            <!-- end :: main-cont__slide -->
+
+            <!-- start :: main-cont__vis1-1 -->
+            <div class="main-cont__vis1-1 main-cont__vis-n1-1">
+                <img src="static/picture/main-cont-s1_i6.png" class="mcv-s1-i6" alt="">
+                <img src="static/picture/main-cont-s1_i7.png" class="mcv-s1-i7" alt="">
+            </div>
+            <!-- end :: main-cont__vis1-1 -->
+            <!-- start :: main-cont__vis2-1 -->
+            <div class="main-cont__vis2-1 main-cont__vis-n3-1">
+                <div class="mcv-s2-i1">
+                    <img src="static/picture/main-cont-s2_i1.png" alt="">
+                </div>
+            </div>
+            <!-- end :: main-cont__vis2-1 -->
+
+            <!-- start :: main-cont__vis3-1 -->
+            <div class="main-cont__vis3-1 main-cont__vis-n2-1">
+                <div class="mcv-s3-i3">
+                    <img src="static/picture/main-cont-s3_i3.png" alt="">
+                </div>
+
+                <img src="static/picture/main-cont-s3_i4.png" class="mcv-s3-i4" alt="">
+                <img src="static/picture/main-cont-s3_i5.png" class="mcv-s3-i5" alt="">
+                <img src="static/picture/main-cont-s3_i6.png" class="mcv-s3-i6" alt="">
+                <img src="static/picture/main-cont-s3_i7.png" class="mcv-s3-i7" alt="">
+            </div>
+            <!-- end :: main-cont__vis3-1 -->
+
+            <!-- start :: main-cont__start-box -->
+            <div class="main-cont__start-box">
+
+                <div>
+                    <img src="static/picture/main_logo2.png" style="width:128px;" alt="">
+                </div>
+
+                <div>
+                    <div><img src="static/picture/main-cont-box1.png" alt="" style="width:100%;"></div>
+                </div>
+
+                <div>
+                    <svg version="1.1" id="main-cont_rect" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="150px" height="150px" viewbox="0 0 150 150" enable-background="new 0 0 150 150" xml:space="preserve">
+                        <rect x="0" y="0" fill="transparent" stroke-dasharray='2000' stroke-dashoffset='2000' stroke="#fff" stroke-width="2" stroke-miterlimit="10" width="150" height="150"></rect>
+                    </svg>
+                </div>
+
+            </div>
+            <!-- end :: main-cont__start-box -->
+
+            <div id="main_cont_start"></div>
+
+            <script src="static/js/cc.js"></script>
+
+        </div>
+        <!-- end :: id=main-contents -->
+
+        <!-- start :: main-business -->
+        <div id="main-business">
+            <div class="main-business__conts">
+                <div class="main-business__conts-title">
+                    BUSINESS
+                    <div class="main-business__conts-title-hr"></div>
+                </div>
+                
+                <ul class="s-about__item clearfix">
+				    <li>
+				        <div class="s-about__banner banner1">
+				            <div class="s-about__head">
+				                <div class="s-about__subject">
+				                    Character<div class="s-about__hr"></div>
+				                </div>
+				            </div>
+				            <div class="s-about__icon"><img src="static/picture/about-banner-icon1.png" alt=""></div>
+				            <p class="s-about__desc">캐릭터의 창작과 홍보, 머천다이징, 라이선싱을 원스톱으로 진행합니다.</p>
+				            <a class="s-about__more on"><img src="static/picture/about-banner-more.png" alt=""></a>
+				            <span class="s-about__empty"><img src="static/picture/bg_empty.png" alt=""></span>
+				            <span class="s-about__bg"></span>
+				        </div>
+				    </li>
+				    <li>
+				        <div class="s-about__banner banner2">
+				            <div class="s-about__head">
+				                <div class="s-about__subject">
+				                    Animation <div class="s-about__hr"></div>
+				                </div>
+				            </div>
+				            <div class="s-about__icon"><img src="static/picture/about-banner-icon2.png" alt=""></div>
+				            <p class="s-about__desc">애니메이션을 기획·제작합니다. 중국, 일본, 유럽, 북미 퍼블리싱 기업과의 제휴로 글로벌 애니메이션시장을 선도합니다.</p>
+				            <a class="s-about__more on"><img src="static/picture/about-banner-more.png" alt=""></a>
+				            <span class="s-about__empty"><img src="static/picture/bg_empty.png" alt=""></span>
+				            <span class="s-about__bg"></span>
+				        </div>
+				    </li>
+				    <li>
+				        <div class="main-business__conts-banner banner3">
+				            <div class="s-about__head">
+				                <div class="s-about__subject">VR /AR <div class="s-about__hr"></div>
+				                </div>
+				            </div>
+				            <div class="s-about__icon"><img src="static/picture/business-banner-icon3.png" alt=""></div>
+				            <p class="s-about__desc">VR/AR 기반의 인터랙티브 게임, 애니메이션, 웹툰 콘텐츠와 플랫폼을 개발합니다.</p>
+				            <a class="s-about__more on"><img src="static/picture/about-banner-more.png" alt=""></a>
+				            <span class="s-about__empty"><img src="static/picture/bg_empty.png" alt=""></span>
+				            <span class="s-about__bg"></span>
+				        </div>
+				    </li>
+				    <li>
+				        <div class="main-business__conts-banner banner4">
+				            <div class="s-about__head">
+				                <div class="s-about__subject">Theme park <div class="s-about__hr"></div>
+				                </div>
+				            </div>
+				            <div class="s-about__icon"><img src="static/picture/business-banner-icon4.png" alt=""></div>
+				            <p class="s-about__desc">도심형 테마파크, 키즈 테마파크 등 다양한 문화 공간에 스토리가 있는 어트랙션 콘텐츠를 제공합니다.</p>
+				            <a class="s-about__more on"><img src="static/picture/about-banner-more.png" alt=""></a>
+				            <span class="s-about__empty"><img src="static/picture/bg_empty.png" alt=""></span>
+				            <span class="s-about__bg"></span>
+				        </div>
+				    </li>
+				</ul>
+            </div>
+        </div>
+        <!-- end :: main-business  -->
+
+        <div class="s-scroll-nav s-scroll-nav--main" id="main__nav">
+            <div id="home" class="s-scroll-nav__item on">
+                <span>HOME</span>
+                <div></div>
+                <div></div>
+            </div>
+            <div id="contents" class="s-scroll-nav__item">
+                <span>CONTENTS</span>
+                <div></div>
+                <div></div>
+            </div>
+            <div id="business" class="s-scroll-nav__item">
+                <span>BUSINESS</span>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+    </div>
+    <!-- end :: main-contents  -->
+        	
+
+
+
+
+
+
+
+
+<script>
+
+
+</script>
+
+
+
+  <!-- start :: c-btn__rnb -->
+ 
+ 
+ 
+ 	<div class="c-btn__top">
+    		<a id="c-btn__top"><img src="static/picture/top_icon.png" alt=""></a>
+	</div>
+ 
+  
+  
+  
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+ 		<div id="FS-1" class="c-btn__rnb">
+	
+ 
+	<div></div>
+		FOLLOW / SHARE
+	</div> 
+<!-- end :: c-btn__rnb -->
+        	
+
+
+
+
+
+
+
+<div class="l-container__pop">
+
+	<!-- start :: s-contact -->
+	
+	
+		
+    		
+    			
+
+<!-- start :: s-contact -->
+	<div class="s-popup s-contact">
+		<div class="s-popup__section1">
+			<div class="s-popup__group1">
+				<div class="s-popup__area1">
+					<p class="s-popup__title title1">Character/Animation</p>
+					<p>
+						<span><img src="static/picture/s-contact-icon1.png" alt=""></span><span class="s-popup__mail">good@coscoi.net</span>
+					</p>
+					<p class="s-popup__info">
+						<span><img src="static/picture/s-contact-icon2.png" alt=""></span><span class="s-popup__phone">070.8670.0157</span>
+					</p>
+				</div>
+				<div class="s-popup__area2">
+					<p class="s-popup__title">MD</p>
+					<p>
+						<span><img src="static/picture/s-contact-icon1.png" alt=""></span><span class="s-popup__mail">sogood@coscoi.net</span>
+					</p>
+					<p class="s-popup__info">
+						<span><img src="static/picture/s-contact-icon2.png" alt=""></span><span class="s-popup__phone">070.8670.0157</span>
+					</p>
+				</div>
+				<div class="s-popup__area3">
+					<p class="s-popup__title">IT</p>
+					<p>
+						<span><img src="static/picture/s-contact-icon1.png" alt=""></span><span class="s-popup__mail">coscoi@coscoi.net</span>
+					</p>
+					<p class="s-popup__info">
+						<span><img src="static/picture/s-contact-icon2.png" alt=""></span><span class="s-popup__phone">070.8670.0130</span>
+					</p>
+				</div>
+			</div>
+			<div class="s-popup__group2">
+				<div class="s-popup__area4">
+					<p class="s-popup__title title2">COSCOI</p>
+					<p class="s-popup__addr">
+						04118)19-5, World Cup buk-ro 6-gil, Mapo-gu, Seoul, Republic of Korea
+					</p>
+					<p>
+						<span><img src="static/picture/s-contact-icon1.png" alt=""></span><span class="s-popup__mail">coscoi@coscoi.net</span>
+					</p>
+					<p class="s-popup__info">
+						<span><img src="static/picture/s-contact-icon2.png" alt=""></span><span class="s-popup__phone">070.8670.0130</span>
+					</p>
+					<p class="s-popup__info">
+						<span><img src="static/picture/s-contact-icon3.png" alt=""></span><span class="s-popup__number">02.3453.6468</span>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="s-popup__section2">
+			<div class="scrollbar-outer">
+				<div class="s-popup__section2-in">
+					<div class="s-popup__head">
+						<p>CONTACT</p>
+						<div class="s-popup__hr"></div>
+					</div>
+				<!-- 	<div class="s-contact__map s-popup__r-area1"
+						style="background: url(/resources/pc/images/google-map.png) no-repeat 50% 50%;">
+						map area
+					</div> -->
+					<div class="s-contact__map s-popup__r-area1">
+						<div id="map"></div>
+					</div>
+					 <script>
+					 $( function () {						 
+						 var contact_map_w  = $('.l-container__pop').width() / 2 * 0.73;
+						 $('#map').width(contact_map_w);
+					 });
+					 
+					 var map; //common.js에서도 호출하기위해 밖에 선언함
+							function initMap() {
+								var location = { lat: 37.558551, lng: 126.919516 };								
+								var latlng = new google.maps.LatLng(37.558551, 126.919516)
+								map = new google.maps.Map(document.getElementById('map'), {
+									zoom: 18,
+									center: location
+									
+								});
+								
+								
+								var coscoi_marker = '/resources/pc/images/marker.png' 
+								var marker = new google.maps.Marker({
+							          position: location,
+							          map: map,
+							          icon: coscoi_marker
+							    });
+								
+								map.addListener('center_changed', function() {
+									map.panTo(marker.getPosition());
+								  });
+								map.addListener('zoom_changed', function() {
+									map.panTo(marker.getPosition());
+								  });
+																														
+							}
+							
+														
+					
+					</script>
+					<script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBT43cPujJ42R8_IR3CMz7_c4uI31mAn4w&callback=initMap">
+					</script> 
+					
+					<div class="s-contact__form">
+					<form id="contactForm" method="post" enctype="multipart/form-data">
+					<input type='hidden' name="languageCode" value="0001">
+						<ul class="s-contact__input-list s-popup__r-area2">
+							<li class="s-contact__input-item">
+								<div class="s-contact-text">
+									<div class="s-contact-text__label company" title="회사">
+										<div id="contactInputDiv" class="s-contact-text__input-box">
+											<input type="text" class="s-contact-text__input" id="companyName" name="companyName" placeholder="회사명*" meta='req' req-msg='필수값을 입력하셔야 합니다.(회사)' req-id='companyName_req' style="cursor:pointer;">
+											<!-- <div class="s-contact-text__input" contenteditable="true"></div> -->
+											<a href="javascript:void(0);" onclick="resetInput('companyName');"><img src="static/picture/contact-form-close.png" alt=""></a>
+											
+										<!-- 	<div class="s-contact-text__input-bak">
+												회사명<span class="s-contact__import">*</span>
+											</div>
+ -->
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="s-contact__input-item">
+								<div class="s-contact-text">
+									<div class="s-contact-text__label name" title="이름/직책">
+										<div id="contactInputDiv" class="s-contact-text__input-box">
+											<input type="text" class="s-contact-text__input" id="personName" name="name" placeholder="이름/직책*" meta='req' req-msg='필수값을 입력하셔야 합니다.(이름/직책)' req-id='name_req' style="cursor:pointer;">
+											<!-- <div class="s-contact-text__input" contenteditable="true"></div> -->
+											<a href="javascript:void(0);" onclick="resetInput('personName');"><img src="static/picture/contact-form-close.png" alt=""></a>
+											<!-- <div class="s-contact-text__input-bak">
+												이름/직책<span class="s-contact__import">*</span>
+											</div>
+ -->
+										</div>
+									</div>
+								</div>
+							</li>
+							
+							<li class="s-contact__input-item">
+								<div class="s-contact-text">
+									<div class="s-contact-text__label email" title="e-mail">
+										<div id="contactInputDiv" class="s-contact-text__input-box">
+											<input type="text" class="s-contact-text__input" id="emailAddress" name="email" style="cursor:pointer;" placeholder="이메일*" meta='req' req-msg='필수값을 입력하셔야 합니다.(이메일)' req-id='email_req'>
+											<!-- <div class="s-contact-text__input" contenteditable="true"></div> -->
+											<a href="javascript:void(0);" onclick="resetInput('emailAddress');"><img src="static/picture/contact-form-close.png" alt=""></a>
+											<!-- <div class="s-contact-text__input-bak">
+												이메일<span class="s-contact__import">*</span>
+											</div> -->
+
+										</div>
+									</div>
+								</div>
+							</li>
+							
+							<li class="s-contact__input-item">
+								<div class="s-contact-text">
+									<div class="s-contact-text__label number" title="전화번호">
+										<div id="contactInputDiv" class="s-contact-text__input-box">
+											<input type="text" class="s-contact-text__input" id="phone" name="phone" placeholder="전화번호" style="cursor:pointer;">
+									<!-- 		<div class="s-contact-text__input" contenteditable="true"></div> -->
+											<a href="javascript:void(0);" onclick="resetInput('phone');"><img src="static/picture/contact-form-close.png" alt=""></a>
+											<!-- <div class="s-contact-text__input-bak">
+												전화번호<span class="s-contact__import">*</span>
+											</div> -->
+
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<div class="s-contact__check-area s-popup__r-area3">
+							<h3 class="s-contact__sub-heading">
+								어떤 서비스를 원하십니까?*
+							</h3>
+							<ul class="s-contact-check-list">
+								<li class="s-contact-check-list__item">
+									<div class="s-contact-checkbox">
+										<input type="checkbox" id="check1" name="case" value="0001" style="cursor:pointer;" class="s-contact-checkbox__input"> <label for="check1" class="s-contact-checkbox__label">콘텐츠/라이선싱 문의</label>
+									</div>
+								</li>
+								<li class="s-contact-check-list__item">
+									<div class="s-contact-checkbox">
+										<input type="checkbox" id="check2" name="case" value="0002" style="cursor:pointer;" class="s-contact-checkbox__input"> <label for="check2" class="s-contact-checkbox__label">프로젝트 의뢰</label>
+									</div>
+								</li>
+								<li class="s-contact-check-list__item">
+									<div class="s-contact-checkbox">
+										<input type="checkbox" id="check3" name="case" value="0003" style="cursor:pointer;" class="s-contact-checkbox__input"> <label for="check3" class="s-contact-checkbox__label">홈페이지 이용</label>
+									</div>
+								</li>
+								<li class="s-contact-check-list__item">
+									<div class="s-contact-checkbox">
+										<input type="checkbox" id="check4" name="case" value="0004" style="cursor:pointer;" class="s-contact-checkbox__input"> <label for="check4" class="s-contact-checkbox__label">기타</label>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="s-popup__r-area4">
+							<div class="s-contact__textarea-w">
+								<textarea class="s-contact-textarea" id="content" name="content" placeholder="내용을 입력 해주세요.*"></textarea>
+							</div>
+							<div class="s-contact__file">
+								<div class="s-contact-text">
+									<label class="s-contact-text__label file" style="cursor:pointer;  padding-left:63px;" title="파일" for="mf"><span id="fileNm" style=" color: #888;font-size: 17px">파일 업로드 (20MB 이하)</span></label> 
+									<input type="file" class="s-contact-text__input" name="mf" id="mf" placeholder="파일 업로드 (20MB 이하)" style="display:none">
+								</div>
+								 <div class="align">
+                                <!--     <ul class="file-list" id="fileNm" style="float:left; width:100%; min-height:20px;"></ul> -->
+                                  
+                                </div>
+							</div>
+
+						</div>
+						<div class="s-contact__submit s-popup__r-area5" style="margin-top:20px;">
+							<div class="s-contact__agree">
+								<div class="s-contact-checkbox">
+									<input type="checkbox" id="check5" style="cursor:pointer;" name="privacycase" class="s-contact-checkbox__input" meta='req' req-msg='필수값을 입력하셔야 합니다.' req-id='privacypolicy_req'>
+									<label for="check5" class="s-contact-checkbox__label"></label>
+									<span class="s-contact__under-line l-privacy__open" style="cursor:pointer;">개인정보처리방침</span>에 동의합니다.*
+									<!-- 라벨 없애는 처리를 해야한다. -->
+								</div>
+							</div>
+							<button type="button" id="contactSubmit" class="s-contact__submit-button">SEND<span></span></button>
+						</div>
+						</form>
+					</div>
+					<script>
+					  $(document).ready(function(){
+						    $('.s-popup s-contact').mouseenter(function(){
+						        if($('.c-button--s1').hasClass('c-button--s1-open')){
+						            lnb_close();
+						        }
+						    });
+						    
+						    
+						 /*    $("input:checkbox[name=case]").bind('click',function() {
+								
+								$("input:checkbox[name=case]").not(this).prop("checked", false);
+								
+								
+							}); */
+						    
+						    
+				        });
+						$("input[name=mf]").on("change", function () {
+							console.log('dsdsds');
+						    var file = this.files[0],
+						    fileName = file.name;
+						    fileExtension = fileName.split(".").pop();
+						    console.log(fileExtension);
+						    if(fileExtension.match((/gif|png|jpg|jpeg|txt|xlsx|xls|doc|hwp|pdf|ppt|zip|rar|mp4/))){
+						    	 fileSize = file.size;
+						    	 if(fileSize > 20000000){
+								    	alert("20MB 이하 파일을 첨부해주세요.");
+								    	fileInit();
+								    	$("#fileNm").html("파일 업로드 (20MB 이하)");
+						    	 }else{
+									  $("#fileNm").html(fileName+"  <button type=\"button\" onclick='fileInit()'>x</button>");
+						    	 }
+						    	
+						    }else{
+						    	alert("허용 되지않은 파일입니다.");
+						    	fileInit();
+						    	$("#fileNm").html("파일 업로드 (20MB 이하)");
+						    }
+	
+						});
+						
+						$('#contactSubmit').click(function(){
+							
+							var selected = [];
+							
+								
+							
+							/* if(!chkRequired($("#contactForm"))){
+								alert("필수값을 입력하세요");
+							    return false;
+							} */
+														
+							if($('#companyName').val()==''){
+								alert("필수 값을 입력하세요.(회사)");
+								return false;
+							}
+							
+							if($('#personName').val()==''){
+								alert("필수 값을 입력하세요.(이름/직책)");
+								return false;
+							}
+							
+							if($('#emailAddress').val()==''){
+								alert("필수 값을 입력하세요.(이메일)");
+								return false;
+							}else{
+								var regExp = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+								/* if(!regExp.test($('#emailAddress').val)) */
+								if(!$('#emailAddress').val().match(regExp)){
+									alert("이메일 형태가 맞지 않습니다.");
+									return false;
+								}
+							}
+							
+							checkcase = document.getElementsByName("case");
+							
+							if(!checkcase[0].checked & !checkcase[1].checked & !checkcase[2].checked & !checkcase[3].checked){
+								alert("필수 값을 입력하세요.(서비스분야)");
+								return false;
+							}
+							
+							if($('#content').val()==''){
+								alert("필수 값을 입력하세요.(내용)");
+								return false;
+							}
+							
+							privacycase = document.getElementsByName("privacycase");
+							
+							if(!privacycase[0].checked){
+								alert("개인정보 처리방침에 동의해주세요.");
+								return false;
+							}
+							$('input:checked[name=case]').each(function() {
+							
+								selected.push($(this).val());	
+
+							});
+							
+							var form = $('#contactForm')[0];
+							
+							var data = new FormData(form);
+							data.append("cases", selected);
+							
+							$.ajax({
+								type : "POST",
+								url : "/contact/send",
+								data : data,
+								contentType: false, 
+								processData: false,
+								success: function(data) {
+									console.log("heello"+data);
+									if(data.result == '101'){
+										console.log("성공");
+										 $('.s-contact__popup').fadeIn(300);
+										 
+										 $("#contactForm").each(function() {//폼초기화
+											 fileInit();
+											 this.reset();
+										 	
+											$("#fileNm").html("파일 업로드 (20MB 이하)");
+										 })
+										
+									}
+								}
+							});
+						
+						})
+					
+					
+						function fileInit(){
+							console.log("hisSss");
+							if( $("#mf").val() != "" ){
+								
+								var agent = navigator.userAgent.toLowerCase();
+								if((navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1) || (agent.indexOf("msie") != -1)) {
+									// ie 일때 input[type=file] init.
+									$("#mf").replaceWith( $("#mf").clone(true) );
+								}else{
+									// other browser 일때 input[type=file] init.
+									$("#mf").val("");
+								}
+								$("#fileNm").html("");
+								
+							}
+							$("#fileNm").html("");
+							return false;
+						}
+						
+
+						function resetInput(id) {
+							$("#"+id).val("");						
+						}
+
+					
+					</script>
+
+				</div>
+			</div>
+
+			<div class="s-popup__close">
+				<div class="c-button--s6">
+					<div class="c-button--s6__circle">
+						<div class="c-button--s6__circle-top">
+							<svg viewbox="0 0 100 100" style="width: 57px; height: 57px;">
+                                <path stroke-linecap="round" stroke-width="5" stroke="#bcbcbc" fill="none" d="M50 10
+                                       a 40 40 0 0 1 0 80
+                                       a 40 40 0 0 1 0 -80">
+                                </path>
+                            </svg>
+						</div>
+					</div>
+					<div class="c-button--s6__icon">
+						<div class="c-button--s6__icon-bar">
+							<div></div>
+						</div>
+						<div class="c-button--s6__icon-bar">
+							<div></div>
+						</div>
+						<div class="c-button--s6__icon-bar">
+							<div></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		 <!-- start :: s-contact__popup -->
+        <div class="s-contact__popup">
+            <div class="s-contact__popup-wrap">
+                <div class="s-contact__popup-msg">
+                    문의하신 내용이 전달되었습니다. <br> 입력하신 이메일(또는 전화)로 신속한 답변 드리겠습니다.
+                </div>
+                <a class="s-contatct__close"><img src="static/picture/contact-form-close.png" alt="닫기"></a>
+            </div>
+        </div>
+        <!-- end :: s-contact__popup -->
+	</div>
+    		
+    		
+    		
+    		
+    		
+    	
+		
+	<!-- end :: s-contact -->
+
+
+	<!-- start :: s__privacy -->
+	<div class="s-popup s-privacy">
+		<div class="s-popup__section1">
+			<!--div class="s-popup__group1">
+                <div class="s-popup__area1">
+                    <p class="s-popup__title title1">Character/Animation .</p>
+                    <p><span><img src="/resources/pc/images/s-contact-icon1.png" alt=""></span><span class="s-popup__mail">good@coscoi.net</span></p>
+                    <p class="s-popup__info"><span><img src="/resources/pc/images/s-contact-icon2.png" alt=""></span><span class="s-popup__phone">070.5038.1798</span></p>
+                </div>
+                <div class="s-popup__area2">
+                    <p class="s-popup__title">MD .</p>
+                    <p><span><img src="/resources/pc/images/s-contact-icon1.png" alt=""></span><span class="s-popup__mail">sogood@coscoi.net</span></p>
+                    <p class="s-popup__info"><span><img src="/resources/pc/images/s-contact-icon2.png" alt=""></span><span class="s-popup__phone">070.5038.1798</span></p>
+                </div>
+                <div class="s-popup__area3">
+                    <p class="s-popup__title">IT .</p>
+                    <p><span><img src="/resources/pc/images/s-contact-icon1.png" alt=""></span><span class="s-popup__mail">coscoi@coscoi.net</span></p>
+                    <p class="s-popup__info"><span><img src="/resources/pc/images/s-contact-icon2.png" alt=""></span><span class="s-popup__phone">070.670.0130</span></p>
+                </div>
+            </div-->
+			<div class="s-popup__group2">
+				<div class="s-popup__area4">
+					<p class="s-popup__title title2">COSCOI</p>
+					<p class="s-popup__addr">04118) 33, Mapo-daero 19 gil, Mapo-gu,
+						Seoul, Korea</p>
+					<p>
+						<span><img src="static/picture/s-contact-icon1.png" alt=""></span><span class="s-popup__mail">coscoi@coscoi.net</span>
+					</p>
+					<p class="s-popup__info">
+						<span><img src="static/picture/s-contact-icon2.png" alt=""></span><span class="s-popup__phone">070.8670.0130</span>
+					</p>
+					<p class="s-popup__info">
+						<span><img src="static/picture/s-contact-icon3.png" alt=""></span><span class="s-popup__number">02.3453.6468</span>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="s-popup__section2">
+			<div class="scrollbar-outer">
+				<div class="s-popup__section2-in">
+					<div class="s-popup__head">
+						<p>PRIVACY POLICY</p>
+						<div class="s-popup__hr"></div>
+					</div>
+					<div class="s-privacy__msg s-popup__r-area1">주식회사 코스코이(이하 “회사”이라 한다)는 개인정보보호법에 따라 
+					이용자의 개인정보 보호 및 권익을 보호하고 개인정보와 관련한 이용자의 고충을 원활하게 처리할 수 있도록 다음과 같은 처리방침을 두고 있습니다. 
+					회사는 개인정보처리방침을 개정하는 경우 웹사이트 공지사항(또는 개별공지)을 통하여 공지할 것입니다. 본 방침은 2017년 08월 31일부터 시행됩니다.</div>
+					
+					<ul></ul>
+					
+					<ul class="s-privacy__group s-popup__r-area2">
+						<li>
+							<p class="s-privacy__group-title">1. 개인정보의 처리 목적</p>
+							<div class="s-privacy__cont">‘주식회사 코스코이’ 이하 ‘코스코이’는 개인정보를 다음의 목적을 위해 처리합니다. 
+							처리한 개인정보는 다음의 목적 이외의 용도로는 사용되지 않으며 이용 목적이 변경될 시에는 사전동의를 구할 예정입니다.</div>
+							<ul class="s-privacy__area">
+								<li>① 재화 또는 서비스 제공 서비스 제공 등을 목적으로 개인정보를 처리합니다.</li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="s-privacy__group s-popup__r-area3">
+						<li>
+							<p class="s-privacy__group-title">2. 개인정보의 보유 및 이용기간</p>
+							<div class="s-privacy__cont">코스코이는 문의 접수일로부터 검토완료 기간 동안 고객의 개인정보를 보유 및 이용하게 됩니다. 
+							검토가 완료된 후 아래의 정보는 명시한 기간 동안 보존됩니다.</div>
+							<ul class="s-privacy__area">
+								<li>① 보존 항목: 성함(직책), 이메일, 전화번호, 회사(소속)</li>
+								<li>② 보존 근거: 서비스 이용의 혼선 방지, 불법적 사용자에 대한 관련 기관 수사협조</li>
+								<li>③ 보존 기간: 6개월</li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="s-privacy__group s-popup__r-area4">
+						<li>
+							<p class="s-privacy__group-title">3. 개인정보의 파기절차 및 방법</p>
+							<div class="s-privacy__cont">코스코이는 원칙적으로 개인정보 수집 및 이용목적이 달성된 후에는 해당 정보를 지체 없이 파기합니다. 
+							파기절차 및 방법은 다음과 같습니다.</div>
+							<ul class="s-privacy__area">
+								<li>① 파기절차</li>
+								<li>- 고객 등을 위해 입력한 정보는 목적이 달성된 후 별도의 DB로 옮겨져(종이의 경우 별도의 서류함) 
+								내부 방침 및 기타 관련 법령에 의한 정보보호 사유에 따라(보유 및 이용기간 참조) 일정기간 저장된 후 파기됩니다.</li>
+								<li>- 별도 DB로 옮겨진 개인정보는 법률에 의한 경우가 아니고서는 다른 목적으로 이용되지 않습니다.</li>
+								<li>② 파기방법</li>
+								<li>- 전자적 파일형태로 저장된 개인정보는 기록을 재생할 수 없는 기술적 방법을 사용하여 삭제합니다.</li>
+								<li>- 종이에 출력된 개인정보는 분쇄기로 분쇄하거나 소각을 통하여 파기합니다</li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="s-privacy__group s-popup__r-area5">
+						<li>
+							<p class="s-privacy__group-title">4. 개인정보 제공</p>
+							<div class="s-privacy__cont">코스코이는 고객들의 개인정보를 “1. 개인정보의 처리 목적"에서 고지한 범위 내에서 사용하며, 
+							고객의 사전 동의 없이는 동 범위를 초과하여 이용하거나 원칙적으로 이용자의 개인정보를 외부에 제공하지 않습니다. 
+							단, 다음의 경우에는 주의를 기울여 개인정보를 이용 및 제공할 수 있습니다.</div>
+							<ul class="s-privacy__area">
+								<li>① 고객들이 사전에 동의한 경우</li>
+								<li>- 개인정보 제공 이전에 개인정보 제공자, 개인정보 제공 목적, 제공하는 개인정보의 항목 및 보유기간을 별도로 알리고 동의절차를 거치며, 
+								이에 이용자가 동의하지 않을 경우에는 제 3자에게 고객의 개인정보를 제공하지 않습니다.</li>
+								<li>- 서비스별 개인정보 제공 및 이벤트에 따른 개인정보 제공의 경우, 수시로 발생하는 가맹점과의 제휴와 이벤트 진행으로 인해 
+								개인정보취급방침 개정의 어려움으로 서비스 제공 내역과 이벤트 제공 내역을 웹 페이지 링크로 명시합니다.</li>
+								<li>② 서비스의 제공에 관한 계약의 이행을 위하여 필요한 개인정보로서 경제적/기술적인 사유로 통상의 동의를 받는 것이 현저히 곤란한 경우</li>
+								<li>③ 법령의 규정에 의거하거나, 수사 목적으로 법령에 정해진 절차와 방법에 따라 수사기관의 요구가 있는 경우</li>
+							</ul>
+						</li>
+					</ul>
+					
+					<ul class="s-privacy__group s-popup__r-area6">
+						<li>
+							<p class="s-privacy__group-title">5. 수집한 개인정보의 위탁</p>
+							<div class="s-privacy__cont">코스코이 고객의 민원사항에 대한 처리 등 원활한 업무 수행을 위하여 다음과 같이 
+							개인정보 취급 업무를 외부 전문업체에 위탁하여 운영하고 있습니다.<br>
+							또한 위탁계약 시 개인정보보호의 안전을 기하기 위하여 개인정보보호 관련 법규의 준수, 개인정보에 관한 제3자 제공 금지 및 사고시의 책임부담 등을 
+							명확히 규정하고 당해 계약 내용을 서면 및 전자적으로 보관하고 있습니다. 동 업체가 변경될 경우, 
+							코스코이는 변경된 업체 명을 공지사항 내지 개인정보취급방침 화면을 통해 고지하도록 하겠습니다.</div>
+							<ul class="s-privacy__area">
+								<li>① 위탁 받는 자: (주)코스코이</li>
+								<li>② 위탁 업무: 홈페이지 이용 문의, 사업 제휴/제안 문의, 기타 문의</li>
+							</ul>
+						</li>
+					</ul>
+					
+					<ul class="s-privacy__group s-popup__r-area7">
+						<li>
+							<p class="s-privacy__group-title">6. 개인정보의 기술적, 관리적 보호  대책</p>
+							<div class="s-privacy__cont">코스코이는 이용자의 개인정보를 취급함에 있어 개인정보가 분실, 도난, 누출, 변조 또는 훼손되지 않도록 
+							안정성 확보를 위하여 다음과 같은 기술적, 관리적 대책을 강구하고  있습니다.</div>
+							<ul class="s-privacy__area">
+								<li>① 개인정보 암호화</li>
+								<li>고객의 개인정보는 비밀번호에 의해 보호되며, 중요한 데이터는 파일 및 전송 데이터를 암호화하거나 파일 잠금 기능을 사용하는 등의 별도 보안기능을 통해 보호 하고 있습니다.</li>
+								<li>② 해킹 등에 대비한 기술적 대책</li>
+								<li>코스코이는 해킹이나 컴퓨터 바이러스 등에 의해 이용자의 개인정보가 유출되거나 훼손되는 것을 막기 위해 외부로부터 접근이 통제된 구역에 시 스템을 설치하고, 
+								침입 차단장치 이용 및 침입탐지시스템을 설치하여 24시간 감시하고 있습니다. 그리고 백신 프로그램을 주기적으로 업데이트하며 갑작스런 바이러스가 출현할 경우 
+								백신이 나오는 즉시 이를 적용함으로써 개인정보가 침해되는 것을 방지하고 있습니다.</li>
+								<li>③ 개인정보처리시스템 접근 제한</li>
+								<li>코스코이는 개인정보를 처리할 수 있도록 체계적으로 구성한 데이터베이스시스템에 대한 접근권한의 부여, 변경, 말소 등에 관한 기준을 수립하고 비밀번호의 생성 방법, 
+								변경 주기 등을 규정 운영하며 기타 개인정보에 대한 접근통제를 위해 필요한 조치를 다하고 있습니다.</li>
+								<li>④ 개인정보 취급 직원의 교육</li>
+								<li>개인정보관련 취급 직원은 담당자에 한정시켜 최소화 하고 새로운 보안기술의 습득 및 개인정보보호 의무에 관해 정기적인 교육을 실시하며 별도의 비밀번호를 부여하여 
+								접근 권한을 관리하는 등 관리적 대책을 시행하고 있습니다.</li>
+								<li>⑤ 개인 정보관리</li>
+								<li>코스코이는 고객의 개인적인 부주의로 개인정보가 유출되어 발생한 문제와 기본적인 인터넷의 위험성 때문에 일어나는 일들에 대해 책임을 지지 않습니다. 
+								비밀번호에 대한 보안 의식을 가지고 비밀번호를 자주 변경하며 공용PC에서의 로그인시 개인정보가 유출되지 않도록 각별한 주의를 기울여 주시기 바랍니다</li>
+							</ul>
+						</li>
+					</ul>
+					
+					<ul class="s-privacy__group s-popup__r-area8">
+						<li>
+							<p class="s-privacy__group-title">7. 개인정보 보호책임자 작성</p>
+							<div class="s-privacy__cont"></div>
+							<ul class="s-privacy__area">
+								<li>① 코스코이는 개인정보 처리에 관한 업무를 총괄해서 책임지고, 
+								개인정보 처리와 관련한 정보주체의 불만처리 및 피해구제 등을 위하여 아래와 같이 개인정보 보호책임자를 지정하고 있습니다.</li>
+								<li>개인정보 보호책임자</li>
+								<li>소속 : (주)코스코이 IT 사업부</li>
+								<li>성명 : 김자근</li>
+								<li>직책 : 본부장</li>
+								<li>연락처 : 070-8760-0131, coscoi@coscoi.net</li>
+								<li>② 정보주체께서는 코스코이의 서비스(또는 사업)을 이용하시면서 발생한 모든 개인정보 보호 관련 문의, 불만처리, 피해구제 등에 관한 사항을 
+								개인정보 보호책임자 및 담당부서로 문의 하실 수 있습니다. 회사는 정보주체의 문의에 대해 지체 없이 답변 및 처리해드릴 것입니다.</li>
+							</ul>
+						</li>
+					</ul>
+					
+					<ul class="s-privacy__group s-popup__r-area9">
+						<li>
+							<p class="s-privacy__group-title">부칙(2017년 08월 31일)</p>
+							<div class="s-privacy__cont">법령 및 정책 또는 보안기술의 변경에 따라 내용의 추가. 삭제 및 수정이 있을 시에는 
+							변경사항의 시행일의 최소 7일 전부터 코스코이 사이트의 공지사항을 통하여 고지할 것 입니다. 
+							다만, 회원의 권리 또는 의무에 중요한 내용의 변경은 최소 30일전에 고지하겠습니다</div>
+							<ul class="s-privacy__area">
+								<li>① 개인정보취급방법 버전번호 : 1.0</li>
+								
+								<li>② 개인정보취급방침 시행일자 : 2017년 08월 31일</li>
+							</ul>
+						</li>
+					</ul>
+					
+					
+				</div>
+			</div>
+
+			<div class="s-popup__close">
+				<div class="c-button--s6">
+					<div class="c-button--s6__circle">
+						<div class="c-button--s6__circle-top">
+							<svg viewbox="0 0 100 100" style="width: 57px; height: 57px;">
+                                <path stroke-linecap="round" stroke-width="5" stroke="#bcbcbc" fill="none" d="M50 10
+                                       a 40 40 0 0 1 0 80
+                                       a 40 40 0 0 1 0 -80">
+                                </path>
+                            </svg>
+						</div>
+					</div>
+					<div class="c-button--s6__icon">
+						<div class="c-button--s6__icon-bar">
+							<div></div>
+						</div>
+						<div class="c-button--s6__icon-bar">
+							<div></div>
+						</div>
+						<div class="c-button--s6__icon-bar">
+							<div></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+	<!-- end :: s__privacy -->
+
+	<!-- start :: s-contents -->
+	<div class="s-popup s-contents">
+		<div class="s-popup__section1" id="contentsPopupImg"></div>
+		<div class="s-popup__section2">
+			<div class="scrollbar-outer">
+				<div class="s-popup__section2-in">
+					<div class="s-popup__head">
+						<p id="content_pop_menu_nm"></p>
+						<div class="s-popup__hr"></div>
+					</div>
+					<div class="s-contents__box"></div>
+				</div>
+			</div>
+
+			<div class="s-popup__close">
+				<div class="c-button--s6">
+					<div class="c-button--s6__circle">
+						<div class="c-button--s6__circle-top">
+							<svg viewbox="0 0 100 100" style="width: 57px; height: 57px;">
+                                <path stroke-linecap="round" stroke-width="5" stroke="#bcbcbc" fill="none" d="M50 10
+                                       a 40 40 0 0 1 0 80
+                                       a 40 40 0 0 1 0 -80">
+                                </path>
+                            </svg>
+						</div>
+					</div>
+					<div class="c-button--s6__icon">
+						<div class="c-button--s6__icon-bar">
+							<div></div>
+						</div>
+						<div class="c-button--s6__icon-bar">
+							<div></div>
+						</div>
+						<div class="c-button--s6__icon-bar">
+							<div></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+	<!-- end :: s-contents -->
+
+</div>
+<!-- end :: l-container__pop  -->
+        </div>
+    </body>
+</html>
